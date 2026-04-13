@@ -1,4 +1,3 @@
-
 <div class="subject-container">
     <article>
         <div class="subject-header">
@@ -6,33 +5,18 @@
             <p>항목을 클릭하면 해당 교수님의 교과목 강의를 다운로드하실 수 있습니다.</p>
         </div>
 
-        <ul class="subject-list">
-
-            
-            
-<div class="professor-container">
-  <div id="prof-grid" class="professor-grid">
-    </div>
+        <div class="professor-wrapper"> <div id="prof-grid" class="professor-grid">
+                </div>
+        </div>
+    </article>
 </div>
 
 <script>
-  /* [수정 방법]
-    1. 해당 교수님의 'videos' 부분에 있는 "주소"를 실제 유튜브 링크로 바꾸세요.
-    2. 주소와 주소 사이에는 반드시 쉼표(,)가 있어야 합니다.
-  */
   const professorData = [
     { name: "남궁선교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
     { name: "우상용교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
-    { name: "이광재교수", videos: ["https://www.youtube.com/watch?v=uWMxmNum9qA1","https://www.youtube.com/watch?v=5EyFGu69jn8","https://www.youtube.com/watch?v=uGT-p14EmK0", 
-                              "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", 
-                              "https://www.youtube.com/watch?v=uGT-p14EmK0", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", 
-                              "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", 
-                              "https://www.youtube.com/watch?v=uGT-p14EmK0", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=5EyFGu69jn8"] },
-    { name: "김낙신교수", videos: ["https://www.youtube.com/watch?v=EV4kxB7-bt4","https://www.youtube.com/watch?v=N745IVRRSQ4","https://www.youtube.com/watch?v=H-2kFomhunY", 
-                              "https://www.youtube.com/watch?v=VlJh7zLdqgs", "https://www.youtube.com/watch?v=HP8MuJMF_FE", "https://www.youtube.com/watch?v=7UEe4_DM_TI", 
-                              "https://www.youtube.com/watch?v=KBqCaYVBf94", "https://www.youtube.com/watch?v=OUe_JRcO3QY", "https://www.youtube.com/watch?v=KBqCaYVBf94", 
-                              "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", 
-                              "https://www.youtube.com/watch?v=uGT-p14EmK0", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=5EyFGu69jn8"] },
+    { name: "이광재교수", videos: ["https://www.youtube.com/watch?v=uWMxmNum9qA1","https://www.youtube.com/watch?v=5EyFGu69jn8","https://www.youtube.com/watch?v=uGT-p14EmK0", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=uGT-p14EmK0", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=uGT-p14EmK0", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=5EyFGu69jn8"] },
+    { name: "김낙신교수", videos: ["https://www.youtube.com/watch?v=EV4kxB7-bt4","https://www.youtube.com/watch?v=N745IVRRSQ4","https://www.youtube.com/watch?v=H-2kFomhunY", "https://www.youtube.com/watch?v=VlJh7zLdqgs", "https://www.youtube.com/watch?v=HP8MuJMF_FE", "https://www.youtube.com/watch?v=7UEe4_DM_TI", "https://www.youtube.com/watch?v=KBqCaYVBf94", "https://www.youtube.com/watch?v=OUe_JRcO3QY", "https://www.youtube.com/watch?v=KBqCaYVBf94", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=uGT-p14EmK0", "https://www.youtube.com/watch?v=w5yROH52VBk", "https://www.youtube.com/watch?v=5EyFGu69jn8"] },
     { name: "김시홍교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
     { name: "유재봉교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
     { name: "박영호교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
@@ -42,10 +26,6 @@
     { name: "조광석교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
     { name: "권오윤교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
     { name: "민경업교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
-    { name: "정인숙교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
-    { name: "최재영교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
-    { name: "한상진교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
-    { name: "이은혜교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
     { name: "정인숙교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
     { name: "최재영교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
     { name: "한상진교수", videos: Array(15).fill("https://www.youtube.com/watch?v=uWMxmNum9qA") },
@@ -61,12 +41,13 @@
     
     let listHtml = '';
     prof.videos.forEach((url, vIdx) => {
-      listHtml += `<li><a href="${url}" target="_blank">🎥 제${vIdx + 1}강 강의보기</a></li>`;
+      listHtml += `<li><a href="${url}" target="_blank"><span class="play-icon">▶</span> 제${vIdx + 1}강 강의보기</a></li>`;
     });
 
     item.innerHTML = `
       <button type="button" class="lecture-btn" onclick="toggleList('list${pIdx}', this)">
-        ${prof.name} <span class="arrow">▼</span>
+        <span class="prof-name">${prof.name}</span>
+        <span class="arrow">▼</span>
       </button>
       <ul id="list${pIdx}" class="link-list">
         ${listHtml}
@@ -78,90 +59,147 @@
   function toggleList(listId, btn) {
     const list = document.getElementById(listId);
     const arrow = btn.querySelector('.arrow');
-    const isVisible = list.style.display === "block";
+    const isVisible = list.classList.contains('show');
 
+    // 다른 리스트 모두 닫기
     document.querySelectorAll('.link-list').forEach(el => {
-      el.style.display = 'none';
+      el.classList.remove('show');
       el.previousElementSibling.querySelector('.arrow').innerHTML = "▼";
+      el.previousElementSibling.classList.remove('active');
     });
 
     if (!isVisible) {
-      list.style.display = "block";
+      list.classList.add('show');
+      btn.classList.add('active');
       arrow.innerHTML = "▲";
+    }
+  }
+
+  // 외부 클릭 시 리스트 닫기
+  window.onclick = function(event) {
+    if (!event.target.matches('.lecture-btn') && !event.target.closest('.lecture-btn')) {
+      document.querySelectorAll('.link-list').forEach(el => {
+        el.classList.remove('show');
+        const btn = el.previousElementSibling;
+        if(btn) {
+            btn.querySelector('.arrow').innerHTML = "▼";
+            btn.classList.remove('active');
+        }
+      });
     }
   }
 </script>
 
 <style>
-  .professor-container { width: 100%; margin: 30px 0; font-family: 'Malgun Gothic', sans-serif; }
-  
+  /* 기본 레이아웃 구성 */
+  .subject-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+  .subject-header { text-align: center; margin-bottom: 50px; }
+  .subject-header h1 { font-size: 2.2rem; color: #1a202c; margin-bottom: 15px; position: relative; display: inline-block; }
+  .subject-header h1::after { content: ''; display: block; width: 50px; height: 3px; background: #0056b3; margin: 10px auto 0; }
+  .subject-header p { color: #718096; font-size: 1.1rem; }
+
+  /* 중앙 정렬을 위한 래퍼 */
+  .professor-wrapper { display: flex; justify-content: center; width: 100%; }
+
   .professor-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-    gap: 15px 6px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 20px 12px;
+    width: 100%;
   }
 
   .professor-item { position: relative; }
 
+  /* 버튼 디자인 개선 */
   .lecture-btn {
     width: 100%;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-top: 4px solid #0056b3;
-    padding: 18px 5px;
-    text-align: center;
-    font-size: 14px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid #0056b3;
+    padding: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     cursor: pointer;
-    font-weight: bold;
-    color: #333;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    transition: 0.2s;
+    gap: 8px;
   }
 
-  .lecture-btn:hover { background-color: #f0f5ff; transform: translateY(-2px); }
+  .prof-name { font-size: 16px; font-weight: 700; color: #2d3748; }
+  .lecture-btn .arrow { font-size: 12px; color: #a0aec0; transition: 0.3s; }
 
+  .lecture-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    border-color: #0056b3;
+    background-color: #f8faff;
+  }
+
+  .lecture-btn.active {
+    background: #0056b3;
+    border-top-color: #003d7a;
+  }
+  .lecture-btn.active .prof-name, .lecture-btn.active .arrow { color: #fff; }
+
+  /* 리스트(드롭다운) 디자인 개선 */
   .link-list {
     display: none;
     list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ddd;
+    padding: 8px;
+    margin-top: 10px;
+    border: none;
     background-color: #fff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     position: absolute;
-    width: 100%;
-    z-index: 100;
-    max-height: 250px; /* 15강 스크롤용 높이 제한 */
+    width: 220px; /* 버튼보다 살짝 넓게 설정 가능 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    border-radius: 12px;
+    max-height: 300px;
     overflow-y: auto;
   }
 
-  /* 스크롤바 세련되게 수정 */
-  .link-list::-webkit-scrollbar { width: 5px; }
-  .link-list::-webkit-scrollbar-thumb { background: #0056b3; border-radius: 10px; }
+  .link-list.show { display: block; animation: fadeInUp 0.3s ease; }
 
-  .link-list li a {
-    display: block;
-    padding: 10px 12px;
-    text-decoration: none;
-    color: #555;
-    font-size: 12px;
-    border-bottom: 1px solid #f1f5f9;
-    text-align: left;
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translate(-50%, 10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
   }
 
-  .link-list li a:hover { background-color: #f8f9fa; color: #0056b3; padding-left: 15px; }
+  /* 스크롤바 디자인 */
+  .link-list::-webkit-scrollbar { width: 6px; }
+  .link-list::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+  .link-list::-webkit-scrollbar-thumb { background: #cbd5e0; border-radius: 10px; }
+  .link-list::-webkit-scrollbar-thumb:hover { background: #0056b3; }
 
-  .arrow { margin-left: 5px; font-size: 10px; color: #999; }
+  .link-list li { margin-bottom: 2px; }
+  .link-list li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 13px;
+    border-radius: 8px;
+    transition: 0.2s;
+  }
 
-  @media (max-width: 1200px) { .professor-grid { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 600px) { .professor-grid { grid-template-columns: repeat(2, 1fr); } }
+  .play-icon { margin-right: 8px; font-size: 10px; color: #e53e3e; }
+
+  .link-list li a:hover {
+    background-color: #ebf4ff;
+    color: #0056b3;
+    transform: scale(1.02);
+  }
+
+  /* 반응형 처리 */
+  @media (max-width: 1024px) { .professor-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 768px) { .professor-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { 
+    .professor-grid { grid-template-columns: repeat(1, 1fr); } 
+    .link-list { width: 100%; }
+  }
 </style>
-
-            
-</div>            
-    </main>
-
-            
-  
