@@ -9,6 +9,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 파란색 부분(교과목 리스트)을 중앙 정렬하기 위한 스타일 */
+        .subject-container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 60px 20px; 
+        }
+        
+        .subject-header {
+            text-align: center; /* 제목과 설명 중앙 정렬 */
+            margin-bottom: 40px;
+        }
+        
+        .subject-header h1 { 
+            font-size: 2rem; 
+            font-weight: 700; 
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* 리스트를 격자 형태로 중앙 배치 */
+        .subject-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            max-width: 1000px; /* 리스트 전체 너비 제한 */
+            margin: 0 auto; /* 리스트 자체를 중앙으로 */
+        }
+
+        .subject-link {
+            display: block;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-top: 3px solid #3b82f6; /* 포인트 컬러 */
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .subject-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #f8fbff;
+            color: #3b82f6;
+        }
+    </style>
 </head>
 <body>
     <div data-include="assets/partials/header.html"></div>
