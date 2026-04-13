@@ -9,43 +9,95 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<div class="subject-container">
-    <article>
-        <div class="subject-header">
-            <h1>교과목</h1>
-            <p>항목을 클릭하면 해당 교과목 자료를 다운로드하실 수 있습니다.</p>
-        </div>
+    
+    <style>
+        /* 교과목 리스트 디자인 최적화 (중앙 정렬 및 카드 스타일) */
+        .subject-container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        
+        .subject-header {
+            text-align: center;
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%); 
+            border: 1px solid #e1e8f0;
+            border-radius: 15px;
+            padding: 50px 20px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+        }
+        
+        .subject-header h1 { font-size: 2.2rem; color: #1a202c; margin-bottom: 15px; font-weight: 700; }
+        .subject-header p { color: #718096; font-size: 1.1rem; }
 
-        <ul class="subject-list">
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/cUeCdUcrE" target="_blank" class="subject-link">역사신학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/dtvnCySh2" target="_blank" class="subject-link">공관복음</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/M7z4bH6jr" target="_blank" class="subject-link">조직신학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/589sC8V4M" target="_blank" class="subject-link">현대신학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/XmUfF2Yqo" target="_blank" class="subject-link">기독교윤리학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/BHtK6Dop1" target="_blank" class="subject-link">목회학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/ehKoWXsPX" target="_blank" class="subject-link">목회학상담</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/6G4lf64OP" target="_blank" class="subject-link">예배학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/f8gmpVvDh" target="_blank" class="subject-link">설교학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/4jbLH62Gf" target="_blank" class="subject-link">구약개론</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/GyoriafML" target="_blank" class="subject-link">신약개론</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/rZH9EBKPZ" target="_blank" class="subject-link">실천신학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/ghvJFp6kX" target="_blank" class="subject-link">선교학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/aeJpJIua6" target="_blank" class="subject-link">기독교교육학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/s9PaoCmVq" target="_blank" class="subject-link">교리신학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/XxSlXzZ4H" target="_blank" class="subject-link">교회사</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/LsJbLbNnZ" target="_blank" class="subject-link">기독교영성</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/qr6A4A4Nh" target="_blank" class="subject-link">교회절기</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/MKCg5MZra" target="_blank" class="subject-link">장로교행정론</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/jJF4LHjJa" target="_blank" class="subject-link">모세오경</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/s5F366BCG" target="_blank" class="subject-link">장로교회사</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/dMv4NbXj4" target="_blank" class="subject-link">예언서주해</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/RjHyDYjdM" target="_blank" class="subject-link">한국교회사</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/AA4jllAtF" target="_blank" class="subject-link">개혁신학</a></li>
-            <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/R6GDOOSWY" target="_blank" class="subject-link">개혁신학PDF</a></li>
-        </ul>
-    </article>
-</div>
+        .subject-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .subject-link {
+            display: block;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid #0056b3;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .subject-link:hover {
+            transform: translateY(-5px);
+            background-color: #f8faff;
+            border-color: #0056b3;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div data-include="assets/partials/header.html"></div>
+
+    <main class="content-page">
+        <div class="subject-container">
+            <article>
+                <div class="subject-header">
+                    <h1>교과목</h1>
+                    <p>항목을 클릭하면 해당 교과목 자료를 다운로드하실 수 있습니다.</p>
+                </div>
+
+                <ul class="subject-list">
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/cUeCdUcrE" target="_blank" class="subject-link">역사신학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/dtvnCySh2" target="_blank" class="subject-link">공관복음</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/M7z4bH6jr" target="_blank" class="subject-link">조직신학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/589sC8V4M" target="_blank" class="subject-link">현대신학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/XmUfF2Yqo" target="_blank" class="subject-link">기독교윤리학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/BHtK6Dop1" target="_blank" class="subject-link">목회학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/ehKoWXsPX" target="_blank" class="subject-link">목회학상담</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/6G4lf64OP" target="_blank" class="subject-link">예배학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/f8gmpVvDh" target="_blank" class="subject-link">설교학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/4jbLH62Gf" target="_blank" class="subject-link">구약개론</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/GyoriafML" target="_blank" class="subject-link">신약개론</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/rZH9EBKPZ" target="_blank" class="subject-link">실천신학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/ghvJFp6kX" target="_blank" class="subject-link">선교학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/aeJpJIua6" target="_blank" class="subject-link">기독교교육학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/s9PaoCmVq" target="_blank" class="subject-link">교리신학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/XxSlXzZ4H" target="_blank" class="subject-link">교회사</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/LsJbLbNnZ" target="_blank" class="subject-link">기독교영성</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/qr6A4A4Nh" target="_blank" class="subject-link">교회절기</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/MKCg5MZra" target="_blank" class="subject-link">장로교행정론</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/jJF4LHjJa" target="_blank" class="subject-link">모세오경</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/s5F366BCG" target="_blank" class="subject-link">장로교회사</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/dMv4NbXj4" target="_blank" class="subject-link">예언서주해</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/RjHyDYjdM" target="_blank" class="subject-link">한국교회사</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/AA4jllAtF" target="_blank" class="subject-link">개혁신학</a></li>
+                    <li><a href="http://yfloavmotj9hz8g2ivvxyqpfin2ciap.quickconnect.to/sharing/R6GDOOSWY" target="_blank" class="subject-link">개혁신학PDF</a></li>
+                </ul>
+            </article>
+        </div>
     </main>
     
     <div data-include="assets/partials/footer.html"></div>
