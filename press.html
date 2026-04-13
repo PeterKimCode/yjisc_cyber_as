@@ -1,49 +1,93 @@
-/* 제목 영역 스타일 수정 (디자인 1) */
-  .subject-header {
-    text-align: center;
-    /* 연푸른색 그라데이션 배경 추가 */
-    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
-    /* 칸을 나누는 듯한 테두리와 둥근 모서리 */
-    border: 1px solid #e1e8f0;
-    border-radius: 12px;
-    /* 입체감을 주는 부드러운 그림자 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    /* 여백 조정 */
-    padding: 40px 20px;
-    margin-bottom: 40px; /* 교수님 목록과의 간격 */
-  }
+<div class="subject-container">
+    <article>
+        <div class="subject-header">
+            <h1>교과목 강의</h1>
+            <div class="header-line"></div>
+            <p>항목을 클릭하면 해당 교수님의 교과목 강의를 다운로드하실 수 있습니다.</p>
+        </div>
 
-  .subject-header h1 {
-    font-size: 2.2rem;
-    color: #1a202c;
-    margin-bottom: 12px;
-    position: relative;
-    display: inline-block;
-    /* 굵기 추가 */
-    font-weight: 800;
-  }
+        <div class="professor-wrapper">
+            <div id="prof-grid" class="professor-grid">
+                </div>
+        </div>
+    </article>
+</div>
 
-  /* 기존에 있던 파란색 줄(::after)을 더 세련되게 수정 */
-  .subject-header h1::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    /* 파란색 그라데이션 */
-    background: linear-gradient(90deg, #0056b3, #007bff);
-    border-radius: 2px;
-    margin: 8px auto 0;
-  }
+<style>
+    /* 1. 전체 컨테이너 및 중앙 정렬 */
+    .subject-container { 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 40px 20px; 
+        font-family: 'Malgun Gothic', sans-serif;
+    }
 
-  .subject-header p {
-    color: #718096;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-top: 15px;
-    max-width: 600px; /* 문장 너비 제한 */
-    margin-left: auto;
-    margin-right: auto;
-  }
+    /* 2. 빨간색 원 부분: 연푸른색 제목 섹션 디자인 */
+    .subject-header {
+        text-align: center;
+        background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%); /* 연푸른색 그라데이션 */
+        border: 1px solid #e1e8f0;
+        border-radius: 15px;
+        padding: 50px 20px;
+        margin-bottom: 50px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03); /* 아주 부드러운 그림자 */
+    }
+
+    .subject-header h1 {
+        font-size: 2.5rem;
+        color: #1a202c;
+        margin-bottom: 0;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    .header-line {
+        width: 50px;
+        height: 4px;
+        background: #0056b3;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    .subject-header p {
+        color: #4a5568;
+        font-size: 1.1rem;
+        margin: 0;
+        opacity: 0.8;
+    }
+
+    /* 3. 교수님 그리드 레이아웃 */
+    .professor-wrapper { display: flex; justify-content: center; }
+    .professor-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* 4. 교수님 버튼 디자인 */
+    .lecture-btn {
+        width: 100%;
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-top: 4px solid #0056b3;
+        padding: 20px 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .lecture-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        background-color: #f8faff;
+    }
+
+    /* 반응형 설정 (화면이 작아질 때) */
+    @media (max-width: 1100px) { .professor-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 700px) { .professor-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>
 
 
 
