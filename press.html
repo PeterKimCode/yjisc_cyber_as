@@ -1,3 +1,53 @@
+/* 제목 영역 스타일 수정 (디자인 1) */
+  .subject-header {
+    text-align: center;
+    /* 연푸른색 그라데이션 배경 추가 */
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    /* 칸을 나누는 듯한 테두리와 둥근 모서리 */
+    border: 1px solid #e1e8f0;
+    border-radius: 12px;
+    /* 입체감을 주는 부드러운 그림자 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* 여백 조정 */
+    padding: 40px 20px;
+    margin-bottom: 40px; /* 교수님 목록과의 간격 */
+  }
+
+  .subject-header h1 {
+    font-size: 2.2rem;
+    color: #1a202c;
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+    /* 굵기 추가 */
+    font-weight: 800;
+  }
+
+  /* 기존에 있던 파란색 줄(::after)을 더 세련되게 수정 */
+  .subject-header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    /* 파란색 그라데이션 */
+    background: linear-gradient(90deg, #0056b3, #007bff);
+    border-radius: 2px;
+    margin: 8px auto 0;
+  }
+
+  .subject-header p {
+    color: #718096;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 15px;
+    max-width: 600px; /* 문장 너비 제한 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+
 <div class="subject-container">
     <article>
         <div class="subject-header">
